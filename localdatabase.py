@@ -19,12 +19,13 @@ try:
             for row in rows:
                 role = row[2]
             if(role == "administrator"):
-                print(f"{user}, you have been authenticated. You're an admnistrator")
+                print(f"{user}, you have been authenticated.")
             else:
-                print(f"{user}, you have been authenticated. You're a user")
+                print(f"{user}, you have been authenticated.")
         else:
             print("User does not exist")
         cursor.close()
+
     userNameInput = input("Enter your username >> ")
     passwordInput = input("Enter your password >> ")
     retrieveAllUserInfo(userNameInput, passwordInput)
